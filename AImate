@@ -1,0 +1,52 @@
+#Planning study
+import datetime
+
+#Get the current date
+now = datetime.datetime.now()
+ 
+print ("Current date and time : ")
+print (now.strftime("%Y-%m-%d %H:%M:%S"))
+
+#Plan study
+month = input('Enter the month you want to plan your study: ')
+day = int(input('Enter the day: '))
+time = input('Enter the timeline: ')
+
+print('Your study plan is set for ' + month + ' ' + str(day) + ' at ' + time + '.')
+
+#Planning workout
+import datetime
+
+#Get the current date
+now = datetime.datetime.now()
+
+print ("Current date and time : ")
+print (now.strftime("%Y-%m-%d %H:%M:%S"))
+
+#Plan workout
+workout_type = input('What type of workout do you want to do? ')
+day = input('What day do you want to do it? ')
+time = input('What time do you want to do it? ')
+ 
+print('Your workout plan is set for ' + day + ' at ' + time + " to do " + workout_type + '.')
+
+
+def monitorMentalHealth(mentor):
+     #Gather user input
+     user_mood = input("On a scale of 1-5, how is your mental health today?\n")
+    
+     #If user input is out of range, ask again
+     while user_mood <= 0 or user_mood >= 6:
+       print("Invalid input. Please try again.\n")
+       user_mood = input("On a scale of 1-5, how is your mental health today?\n")
+      
+     #If user input is 1-3, take appropriate action
+     if user_mood > 0 and user_mood <= 3:
+       print("Please schedule an appointment with a ",mentor,'right away.')
+       
+     #If input is 4-5, print supportive message
+     elif user_mood >3 and user_mood <= 5:
+       print("It's great to hear you're doing well! Please reach out to a ", mentor, " if your mental health begins to decline.")
+      
+  #Call monitor Mental Health function
+monitorMentalHealth("mental health professional")
